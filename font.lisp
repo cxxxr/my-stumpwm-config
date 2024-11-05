@@ -4,16 +4,14 @@
          xft:*font-dirs*
          :test #'equal)
 
-(add-hook *start-hook*
-          (lambda ()
-            (xft:cache-fonts)
+(xft:cache-fonts)
 
-            (set-font
-             (list
-              (make-instance
-               'xft:font
-               :family "PlemolJP Console HS"
-               :subfamily "Regular"
-               :size 15)))
+(set-font
+ (list
+  (make-instance
+   'xft:font
+   :family "PlemolJP Console HS"
+   :subfamily "Regular"
+   :size 15)))
 
-            (stumpwm::resize-mode-line (first stumpwm::*mode-lines*))))
+;; (stumpwm::resize-mode-line (first stumpwm::*mode-lines*))
