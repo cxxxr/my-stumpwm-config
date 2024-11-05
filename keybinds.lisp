@@ -2,6 +2,8 @@
 
 (set-prefix-key (kbd "C-3"))
 
+(define-key *root-map* (kbd "t") "display-info")
+
 (define-key *root-map* (kbd "c") "terminal")
 (define-key *root-map* (kbd "C-c") "terminal")
 (define-key *top-map* (kbd "s-RET") "terminal")

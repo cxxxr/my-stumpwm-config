@@ -1,5 +1,6 @@
 (in-package :my-stumpwm-config)
 
+#|
 (setf stumpwm:*mode-line-highlight-template* "^[^78~A^]")
 (setf stumpwm:*window-format* "%m%n%s%20t")
 
@@ -16,3 +17,4 @@
 
 (unless (stumpwm::head-mode-line (current-head))
   (toggle-mode-line (current-screen) (current-head)))
+|#

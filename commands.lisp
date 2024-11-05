@@ -1,5 +1,10 @@
 (in-package :my-stumpwm-config)
 
+(defcommand display-info () ()
+  (message "~A [~A] "
+           (run-shell-command "date '+%R %F %a'|tr -d [:cntrl:]" t)
+           (battery-portable::fmt-bat nil)))
+
 (defcommand browser () ()
   (run-or-raise "vivaldi" '(:class "Vivaldi")))
 
@@ -29,11 +34,11 @@
 (defcommand reboot () () (run-shell-command "systemctl reboot"))
 (defcommand suspend () () (run-shell-command "systemctl suspend"))
 
-(defcommand external-display () ()
+(defcommand screen-external () ()
   (run-shell-command "xrandr --output eDP-1 --off")
   (run-shell-command "xrandr --output DP-3 --mode 3840x2160"))
 
-(defcommand internal-display () ()
+(defcommand screen-internal () ()
   ;; (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
   (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
   (run-shell-command "xrandr --output DP-3 --off"))
