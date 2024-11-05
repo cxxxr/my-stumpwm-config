@@ -42,3 +42,14 @@
 (defcommand backlight-down () ()
   (run-shell-command "light -U 1")
   (display-backlight-value))
+
+(defun display-volume ()
+  (message "~A" (run-shell-command "wpctl get-volume @DEFAULT_AUDIO_SINK@" t)))
+
+(defcommand audio-volume-up () ()
+  (run-shell-command "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
+  (display-volume))
+
+(defcommand audio-volume-down () ()
+  (run-shell-command "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
+  (display-volume))

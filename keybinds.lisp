@@ -36,3 +36,6 @@
 
 (define-key *top-map* (kbd "XF86MonBrightnessDown") "backlight-down")
 (define-key *top-map* (kbd "XF86MonBrightnessUp") "backlight-up")
+
+(define-key *top-map* (kbd "XF86AudioLowerVolume") "audio-volume-down")
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "audio-volume-up")
