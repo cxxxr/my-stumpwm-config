@@ -1,6 +1,6 @@
 (in-package :my-stumpwm-config)
 
-(set-prefix-key (kbd "C-3"))
+(set-prefix-key (kbd "C-Tab"))
 
 (define-key *root-map* (kbd "t") "display-info")
 
