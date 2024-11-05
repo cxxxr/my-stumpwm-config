@@ -2,15 +2,17 @@
 
 (set-prefix-key (kbd "C-3"))
 
-(define-key *root-map* (kbd "c") "exec alacritty")
-(define-key *root-map* (kbd "C-c") "exec alacritty")
-(define-key *root-map* (kbd "b") "exec vivaldi")
+(define-key *root-map* (kbd "c") "terminal")
+(define-key *root-map* (kbd "C-c") "terminal")
+(define-key *top-map* (kbd "s-RET") "terminal")
+
+(define-key *root-map* (kbd "b") "browser")
+(define-key *top-map* (kbd "s-b") "browser")
 
 (define-key *top-map* (kbd "s-n") "pull-hidden-next")
 (define-key *top-map* (kbd "s-p") "pull-hidden-previous")
 (define-key *top-map* (kbd "s-o") "fnext")
 (define-key *top-map* (kbd "s-TAB") "fother")
-(define-key *top-map* (kbd "s-RET") "exec alacritty")
 (define-key *top-map* (kbd "s-d") "exec")
 (define-key *top-map* (kbd "s-S") "hsplit")
 (define-key *top-map* (kbd "s-s") "vsplit")
@@ -32,7 +34,6 @@
 (define-key *top-map* (kbd "s-;") "colon")
 (define-key *top-map* (kbd "s-g") "abort")
 (define-key *top-map* (kbd "s-k") "delete")
-(define-key *top-map* (kbd "s-b") "exec vivaldi")
 
 (define-key *top-map* (kbd "XF86MonBrightnessDown") "backlight-down")
 (define-key *top-map* (kbd "XF86MonBrightnessUp") "backlight-up")

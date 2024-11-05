@@ -1,5 +1,11 @@
 (in-package :my-stumpwm-config)
 
+(defcommand browser () ()
+  (run-or-raise "vivaldi" '(:class "Vivaldi")))
+
+(defcommand terminal () ()
+  (run-or-raise "alacritty -e tmux" '(:class "Alacritty")))
+
 (defcommand group-next () ()
   (gnext)
   (stumpwm::echo-groups (current-screen) stumpwm::*group-format* t))
