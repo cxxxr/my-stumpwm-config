@@ -29,5 +29,5 @@
 
 (defcommand internal-display () ()
   ;; (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
-  (run-shell-command "xrandr --output eDP-1 --mode 1920x1200")
+  (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
   (run-shell-command "xrandr --output DP-3 --off"))
