@@ -33,3 +33,6 @@
 (define-key *top-map* (kbd "s-g") "abort")
 (define-key *top-map* (kbd "s-k") "delete")
 (define-key *top-map* (kbd "s-b") "exec vivaldi")
+
+(define-key *top-map* (kbd "XF86MonBrightnessDown") "backlight-down")
+(define-key *top-map* (kbd "XF86MonBrightnessUp") "backlight-up")

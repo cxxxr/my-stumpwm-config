@@ -31,3 +31,14 @@
   ;; (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
   (run-shell-command "xrandr --output eDP-1 --mode 2880x1800")
   (run-shell-command "xrandr --output DP-3 --off"))
+
+(defun display-backlight-value ()
+  (stumpwm:message "backlight ~A" (run-shell-command "light -G" t)))
+
+(defcommand backlight-up () ()
+  (run-shell-command "light -A 1")
+  (display-backlight-value))
+
+(defcommand backlight-down () ()
+  (run-shell-command "light -U 1")
+  (display-backlight-value))
