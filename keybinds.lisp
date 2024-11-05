@@ -1,8 +1,8 @@
 (in-package :my-stumpwm-config)
 
-(set-prefix-key (kbd "C-Tab"))
+(set-prefix-key (kbd "s-f"))
 
-(define-key *root-map* (kbd "t") "display-info")
+(define-key *top-map* (kbd "s-t") "display-info")
 
 (define-key *root-map* (kbd "c") "terminal")
 (define-key *root-map* (kbd "C-c") "terminal")
