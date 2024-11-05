@@ -9,7 +9,7 @@
   (run-or-raise "vivaldi" '(:class "Vivaldi")))
 
 (defcommand terminal () ()
-  (run-or-raise "alacritty" '(:class "Alacritty")))
+  (run-or-raise "alacritty -e tmux" '(:class "Alacritty")))
 
 (defcommand group-next () ()
   (gnext)
